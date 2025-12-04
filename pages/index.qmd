@@ -1,0 +1,15 @@
+---
+title: "Scientific Plot Library"
+---
+
+Welcome to the **Scientific Plot Library**.
+
+This site collects reproducible plotting examples in **Python** and **R** for our field.
+
+- Browse the **Python** examples from the navbar.
+- Browse the **R** examples from the navbar.
+
+Each page includes:
+- A short explanation
+- Code snippets
+- The rendered plot

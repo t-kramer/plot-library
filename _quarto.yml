@@ -1,0 +1,49 @@
+project:
+  type: website
+
+website:
+  title: "CBE Building Science Plot Library"
+  navbar:
+    left:
+      - href: pages/index.qmd
+        text: Home
+
+      - text: Styling
+        menu:
+        - href: pages/styling/index.qmd
+          text: Guidelines
+        - href: pages/styling/color-palettes.qmd
+          text: Color palettes
+        - href: pages/styling/font-styles.qmd
+          text: Font styling
+
+      - href: pages/r/index.qmd
+        text: R
+      - href: pages/python/index.qmd
+        text: Python
+      - href: pages/git/index.qmd
+        text: Using Git
+      - href: pages/ai/index.qmd
+        text: Using AI
+      - href: pages/resources/index.qmd
+        text: Resources
+
+    right:
+      - icon: github
+        href: https://github.com/t-kramer/plot-library
+        aria-label: GitHub repository
+
+
+  page-footer:
+      left: |
+        Created by [@t-kramer](https://github.com/t-kramer)
+
+      right: |
+        Built with [Quarto](https://quarto.org)
+
+
+format:
+  html:
+    theme: quartz
+    css: styles/custom.scss
+    toc: true

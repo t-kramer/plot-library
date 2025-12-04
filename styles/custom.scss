@@ -1,0 +1,14 @@
+/* Tweak body font size & max width */
+body {
+  font-size: 16px;
+}
+
+/* Slightly widen content to give more room for code and plots */
+main.content {
+  max-width: 900px;
+}
+
+/* Make code blocks a bit more compact */
+.code-with-output .sourceCode {
+  font-size: 0.9rem;
+}
