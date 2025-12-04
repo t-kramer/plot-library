@@ -1,0 +1,9 @@
+---
+title: "Plot Library"
+listing:
+  contents:
+    - plots/*.qmd
+  type: grid
+  sort: "title"
+  fields: [image, title, description]
+---

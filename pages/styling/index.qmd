@@ -1,0 +1,46 @@
+# Styling Guidelines
+
+These guidelines define the **default visual standards** for plots and figures in the CBE Building Science Plot Library.
+
+The main goals are:
+
+- **clarity** – figures should be easy to interpret
+- **consistency** – plots should look coherent across projects
+- **reproducibility** – formatting choices should be deliberate and documented
+- **publication-readiness** – figures should scale cleanly from reports to journal submissions
+
+These recommendations aim to encourage good habits in everyday work and to reduce last-minute figure reformatting when preparing publications.
+
+
+## General plotting guidelines
+
+- Use a **sans-serif font** (e.g., Arial or Helvetica) for all text in figures.
+- Use **standard journal widths** when preparing figures for scientific publications:
+  - Single-column: `89 mm`
+  - Two-column: `183 mm`
+- When using these standard widths, a **font size** of ~`7pt` is appropriate for axis labels, tick labels, and legend text.
+- Use a **white background** for all plots.  
+  A transparent background is also acceptable when exporting PNGs (e.g., for slides).
+- For charts and plots, **avoid borders** unless needed for clarity.
+- Use **no more than 4–6 tick labels** on each axis where possible.
+- Include **detailed captions.**  
+  The figure and caption should be understandable without referring back to the main text.
+
+
+::: {.callout-important}
+## Things to avoid
+
+- **Avoid pie charts.**  
+  Bar charts usually communicate the same information more clearly and comparably.
+
+- **Avoid 3D charts.**  
+  When rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.
+
+- **Avoid gridlines by default.**  
+  Gridlines were historically used to assist manual interpretation.  
+  In modern workflows, it is better to:
+  - share the underlying dataset, and  
+  - add gridlines only if they improve interpretability.
+:::
+
+

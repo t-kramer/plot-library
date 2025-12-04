@@ -94,6 +94,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../pages/index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/plot-library.html"> 
+<span class="menu-text">Plot Library</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-styling" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Styling</span>
@@ -101,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-styling">    
         <li>
     <a class="dropdown-item" href="../../pages/styling/index.html">
- <span class="dropdown-text">General suggestions</span></a>
+ <span class="dropdown-text">Guidelines</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../pages/styling/color-palettes.html">
@@ -109,26 +113,37 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../../pages/styling/font-styles.html">
- <span class="dropdown-text">Fonts</span></a>
+ <span class="dropdown-text">Font styling</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../../pages/r/index.html"> 
-<span class="menu-text">R</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-using-code" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Using Code</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-using-code">    
+        <li>
+    <a class="dropdown-item" href="../../pages/code/r.html">
+ <span class="dropdown-text">R</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../pages/python/index.html"> 
-<span class="menu-text">Python</span></a>
+        <li>
+    <a class="dropdown-item" href="../../pages/code/python.html">
+ <span class="dropdown-text">Python</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../pages/git/index.qmd"> 
-<span class="menu-text">Using Git</span></a>
+        <li>
+    <a class="dropdown-item" href="../../pages/code/git.html">
+ <span class="dropdown-text">Using Git</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../pages/ai/index.html"> 
-<span class="menu-text">Using AI</span></a>
+        <li>
+    <a class="dropdown-item" href="../../pages/code/ai.html">
+ <span class="dropdown-text">Using AI</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../pages/code/manuscripts.html">
+ <span class="dropdown-text">Generating manuscripts</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../pages/resources/index.html"> 
 <span class="menu-text">Resources</span></a>
@@ -151,8 +166,17 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#styling-guidelines" id="toc-styling-guidelines" class="nav-link active" data-scroll-target="#styling-guidelines">Styling Guidelines</a>
+  <ul class="collapse">
+  <li><a href="#general-plotting-guidelines" id="toc-general-plotting-guidelines" class="nav-link" data-scroll-target="#general-plotting-guidelines">General plotting guidelines</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -160,8 +184,64 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="styling-guidelines" class="level1">
+<h1>Styling Guidelines</h1>
+<p>These guidelines define the <strong>default visual standards</strong> for plots and figures in the CBE Building Science Plot Library.</p>
+<p>The main goals are:</p>
+<ul>
+<li><strong>clarity</strong> – figures should be easy to interpret</li>
+<li><strong>consistency</strong> – plots should look coherent across projects</li>
+<li><strong>reproducibility</strong> – formatting choices should be deliberate and documented</li>
+<li><strong>publication-readiness</strong> – figures should scale cleanly from reports to journal submissions</li>
+</ul>
+<p>These recommendations aim to encourage good habits in everyday work and to reduce last-minute figure reformatting when preparing publications.</p>
+<section id="general-plotting-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="general-plotting-guidelines">General plotting guidelines</h2>
+<ul>
+<li>Use a <strong>sans-serif font</strong> (e.g., Arial or Helvetica) for all text in figures.</li>
+<li>Use <strong>standard journal widths</strong> when preparing figures for scientific publications:
+<ul>
+<li>Single-column: <code>89 mm</code></li>
+<li>Two-column: <code>183 mm</code></li>
+</ul></li>
+<li>When using these standard widths, a <strong>font size</strong> of ~<code>7pt</code> is appropriate for axis labels, tick labels, and legend text.</li>
+<li>Use a <strong>white background</strong> for all plots.<br>
+A transparent background is also acceptable when exporting PNGs (e.g., for slides).</li>
+<li>For charts and plots, <strong>avoid borders</strong> unless needed for clarity.</li>
+<li>Use <strong>no more than 4–6 tick labels</strong> on each axis where possible.</li>
+<li>Include <strong>detailed captions.</strong><br>
+The figure and caption should be understandable without referring back to the main text.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Things to avoid
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Avoid pie charts.</strong><br>
+Bar charts usually communicate the same information more clearly and comparably.</p></li>
+<li><p><strong>Avoid 3D charts.</strong><br>
+When rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.</p></li>
+<li><p><strong>Avoid gridlines by default.</strong><br>
+Gridlines were historically used to assist manual interpretation.<br>
+In modern workflows, it is better to:</p>
+<ul>
+<li>share the underlying dataset, and<br>
+</li>
+<li>add gridlines only if they improve interpretability.</li>
+</ul></li>
+</ul>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -565,6 +645,19 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Created by <a href="https://github.com/t-kramer">t-kramer</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
 
 
 

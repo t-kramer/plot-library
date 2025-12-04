@@ -187,5 +187,145 @@
     "title": "Plotting in Python",
     "section": "Core ideas",
     "text": "Core ideas\n\n1. Data as DataFrames\nMost examples assume:\n\none row = one observation\none column = one variable\ndata stored as pandas DataFrames\n\nCommon preprocessing tasks before plotting:\n\ncleaning and filtering\naggregation with groupby\nreshaping via melt() and pivot()\n\nClear data structure simplifies plotting code.\n\n\n\n2. matplotlib as the foundation\nThere are two main ways to use matplotlib:\n\nStateful style (quick)\nimport matplotlib.pyplot as plt\n\nplt.plot(x, y)\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.title(\"Example\")\nplt.show()\n\n\nObject-oriented style (recommended)\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\nax.plot(x, y)\nax.set_xlabel(\"x\")\nax.set_ylabel(\"y\")\nax.set_title(\"Example\")\nfig.tight_layout()\nThe object-oriented interface is more flexible and easier to reuse in real projects.\n\n\n\n\n3. seaborn as a helper layer\nseaborn simplifies many plot types:\n\ndistributions\nregression plots\ncategorical comparisons\n\nExample:\nimport seaborn as sns\n\nsns.scatterplot(data=df, x=\"temp\", y=\"comfort\", hue=\"building\")\nseaborn uses matplotlib internally and can be customized the same way.\n\n\n\n4. Styling and consistency\nIn matplotlib, visual defaults can be controlled globally:\nimport matplotlib as mpl\n\nmpl.rcParams[\"figure.figsize\"] = (8, 5)\nmpl.rcParams[\"font.size\"] = 11\nLater, a centralized style file (e.g. lab_style.mplstyle) can be created and reused.\n\n\n\n5. Exporting figures\nAlways specify output format and quality:\nfig.savefig(\n    \"figures/example_plot.pdf\",\n    bbox_inches=\"tight\",\n    dpi=300\n)\nGuidelines:\n\nuse PDF/SVG for vector output\ncontrol figure size explicitly\nseparate source code from output figures\n\n\n\n\n6. Reproducibility principles\nGood practice includes:\n\nversion control (Git)\nscripts or notebooks that run top-to-bottom\nfunctions for repeated patterns\navoidance of manual tweaks\n\nReusable helpers (e.g. plot helpers, style functions) lead to cleaner code and consistent figures."
+  },
+  {
+    "objectID": "pages/code/r.html",
+    "href": "pages/code/r.html",
+    "title": "Plotting in R",
+    "section": "",
+    "text": "This section focuses on R-based visualizations for building science and indoor environmental quality data.\nThe examples in this library will mostly use:"
+  },
+  {
+    "objectID": "pages/code/r.html#core-ideas",
+    "href": "pages/code/r.html#core-ideas",
+    "title": "Plotting in R",
+    "section": "Core ideas",
+    "text": "Core ideas\n\n1. Data as data frames\nMost R plotting in this library assumes:\n\nyour data is in a data frame or tibble\none row = one observation\none column = one variable\n\nIf your data is not in this shape, reshaping is usually the first step using functions such as:\n\npivot_longer() and pivot_wider() (tidyr)\nmutate(), filter(), group_by(), summarise() (dplyr)\n\nWell-structured data makes plotting simpler and more predictable.\n\n\n\n2. Grammar of Graphics mindset\nggplot2 follows a “grammar of graphics” approach where:\n\ndata provides values\naesthetics map variables to visual properties\ngeoms define how data is drawn (points, lines, bars, etc.)\nscales control how data maps to visual values\nfacets create small multiples\nthemes control appearance\n\nMost plots follow a structure like:\nggplot(data, aes(x = &lt;var&gt;, y = &lt;var&gt;, color = &lt;group&gt;)) +\n  geom_&lt;something&gt;() +\n  theme_&lt;something&gt;() +\n  labs(x = \"X label\", y = \"Y label\", title = \"Title\")\nThis makes plots systematic, testable, and easy to refine.\n\n\n\n3. Factor ordering matters\nFor categorical variables (e.g. survey responses, building IDs, Likert scales):\n\nset factor levels explicitly\nnever rely on default alphabetical ordering\n\nExample:\ndf$response &lt;- factor(\n  df$response,\n  levels = c(\"Cold\", \"Cool\", \"Neutral\", \"Warm\", \"Hot\")\n)\nThis avoids confusing axis and legend orderings.\n\n\n\n4. Themes and consistency\nVisual consistency matters as much as correctness.\nYou should aim for:\n\na consistent font family and size\nrestrained use of color\nminimal distractions (no unnecessary gridlines)\nconsistent sizing across figures\n\nFor now, theme_minimal() or theme_classic() are good defaults. Later, a custom lab theme can be added and reused everywhere.\n\n\n\n5. Exporting figures\nExport figures with explicit size and resolution:\nggsave(\n  \"figures/example_plot.pdf\",\n  width = 8,\n  height = 5,\n  units = \"in\",\n  dpi = 300\n)\nRecommendations:\n\nuse vector formats (PDF, SVG) for publications\nembed intent into filenames\nkeep figures in a dedicated folder\n\n\n\n\n6. Reproducibility principles\nPlots should be:\n\ngenerated from code, not GUIs\nfully reproducible from raw data\nstyled using functions, not copy-paste\n\nAim to write small helper functions such as:\n\ntheme_lab()\nscale_color_lab()\nscale_fill_lab()\n\nand reuse them across projects."
+  },
+  {
+    "objectID": "pages/code/r.html#where-this-r-section-is-going",
+    "href": "pages/code/r.html#where-this-r-section-is-going",
+    "title": "Plotting in R",
+    "section": "Where this R section is going",
+    "text": "Where this R section is going\nThis space will grow to include:\n\nreusable plotting patterns\nhelper functions\ncommon domain patterns\nreferences and recommended reading\n\nThe goal is a growing knowledge base, not just a gallery."
+  },
+  {
+    "objectID": "pages/code/python.html",
+    "href": "pages/code/python.html",
+    "title": "Plotting in Python",
+    "section": "",
+    "text": "This section focuses on Python-based visualizations for building science and indoor environmental quality data.\nThe examples in this library will mainly use:"
+  },
+  {
+    "objectID": "pages/code/python.html#core-ideas",
+    "href": "pages/code/python.html#core-ideas",
+    "title": "Plotting in Python",
+    "section": "Core ideas",
+    "text": "Core ideas\n\n1. Data as DataFrames\nMost examples assume:\n\none row = one observation\none column = one variable\ndata stored as pandas DataFrames\n\nCommon preprocessing tasks before plotting:\n\ncleaning and filtering\naggregation with groupby\nreshaping via melt() and pivot()\n\nClear data structure simplifies plotting code.\n\n\n\n2. matplotlib as the foundation\nThere are two main ways to use matplotlib:\n\nStateful style (quick)\nimport matplotlib.pyplot as plt\n\nplt.plot(x, y)\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.title(\"Example\")\nplt.show()\n\n\nObject-oriented style (recommended)\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\nax.plot(x, y)\nax.set_xlabel(\"x\")\nax.set_ylabel(\"y\")\nax.set_title(\"Example\")\nfig.tight_layout()\nThe object-oriented interface is more flexible and easier to reuse in real projects.\n\n\n\n\n3. seaborn as a helper layer\nseaborn simplifies many plot types:\n\ndistributions\nregression plots\ncategorical comparisons\n\nExample:\nimport seaborn as sns\n\nsns.scatterplot(data=df, x=\"temp\", y=\"comfort\", hue=\"building\")\nseaborn uses matplotlib internally and can be customized the same way.\n\n\n\n4. Styling and consistency\nIn matplotlib, visual defaults can be controlled globally:\nimport matplotlib as mpl\n\nmpl.rcParams[\"figure.figsize\"] = (8, 5)\nmpl.rcParams[\"font.size\"] = 11\nLater, a centralized style file (e.g. lab_style.mplstyle) can be created and reused.\n\n\n\n5. Exporting figures\nAlways specify output format and quality:\nfig.savefig(\n    \"figures/example_plot.pdf\",\n    bbox_inches=\"tight\",\n    dpi=300\n)\nGuidelines:\n\nuse PDF/SVG for vector output\ncontrol figure size explicitly\nseparate source code from output figures\n\n\n\n\n6. Reproducibility principles\nGood practice includes:\n\nversion control (Git)\nscripts or notebooks that run top-to-bottom\nfunctions for repeated patterns\navoidance of manual tweaks\n\nReusable helpers (e.g. plot helpers, style functions) lead to cleaner code and consistent figures."
+  },
+  {
+    "objectID": "pages/code/python.html#where-this-python-section-is-going",
+    "href": "pages/code/python.html#where-this-python-section-is-going",
+    "title": "Plotting in Python",
+    "section": "Where this Python section is going",
+    "text": "Where this Python section is going\nFuture additions may include:\n\nreusable plotting utilities\nstandardized styling helpers\nPython/R side-by-side examples\ncurated references and learning resources\n\nThe aim is to turn this into a living reference, not just static examples."
+  },
+  {
+    "objectID": "pages/code/ai.html",
+    "href": "pages/code/ai.html",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "",
+    "text": "This page provides guidance on how to use AI tools (such as ChatGPT and coding assistants) responsibly and effectively when developing figures, analyzing data, and writing code.\nAI is treated here as a support tool, not a replacement for scientific judgment or statistical reasoning."
+  },
+  {
+    "objectID": "pages/code/ai.html#what-ai-is-good-at",
+    "href": "pages/code/ai.html#what-ai-is-good-at",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "What AI is good at",
+    "text": "What AI is good at\nAI tools are particularly useful for:\n\nCode assistance\n\ngenerating boilerplate Python/R code\nexplaining unfamiliar functions or syntax\nconverting logic between languages (e.g., R ↔︎ Python)\nwriting helper functions\ndebugging simple errors\n\n\n\nVisualization prototyping\n\ngenerating first drafts of plots\nsuggesting plot types for a dataset\ntranslating conceptual ideas into code\nexploring alternative encodings (e.g., color vs shape vs faceting)\n\n\n\nDocumentation and writing\n\ndrafting README files or documentation pages\nimproving clarity of plot explanations\nsummarizing code behavior\ngenerating examples and templates"
+  },
+  {
+    "objectID": "pages/code/ai.html#what-ai-is-not-good-at",
+    "href": "pages/code/ai.html#what-ai-is-not-good-at",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "What AI is not good at",
+    "text": "What AI is not good at\nAI should not be trusted blindly for:\n\nStatistical correctness\n\nmodel selection\ninterpreting results\nvalidating assumptions\nerror analysis\n\nAlways verify statistical reasoning independently.\n\n\nScientific interpretation\nAI does not understand your domain.\nIt cannot judge whether a result is scientifically meaningful.\n\n\nData privacy and ethics\nDo not upload:\n\nconfidential data\npersonally identifiable information\nunpublished results\nsensitive datasets\n\nWhen in doubt, assume the data should not be shared."
+  },
+  {
+    "objectID": "pages/code/ai.html#good-workflow-how-to-integrate-ai-into-plotting",
+    "href": "pages/code/ai.html#good-workflow-how-to-integrate-ai-into-plotting",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Good workflow: how to integrate AI into plotting",
+    "text": "Good workflow: how to integrate AI into plotting\nA recommended workflow:\n\nYou define the question.\nYou clean and structure the data.\nYou ask AI for plotting ideas or code templates.\nYou review and adapt the code.\nYou validate the output visually and statistically.\nYou refine styling and labeling manually.\nYou document the final reasoning in your own words.\n\nAI is a drafting assistant, not an author."
+  },
+  {
+    "objectID": "pages/code/ai.html#asking-better-questions",
+    "href": "pages/code/ai.html#asking-better-questions",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Asking better questions",
+    "text": "Asking better questions\nAI works best when you provide:\n\na small reproducible example\na clear description of the outcome you want\ncontext about your dataset\nconstraints (e.g., publication quality, grayscale safe, accessible colors)\n\nExample:\n\n“I have a dataframe with time, temperature, and TSV.\nI want a plot that shows trend and uncertainty bands, in a style suitable for a journal paper.\nI am using Python/matplotlib.”\n\nPoor prompts are vague; good prompts are specific."
+  },
+  {
+    "objectID": "pages/code/ai.html#validation-checklist",
+    "href": "pages/code/ai.html#validation-checklist",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Validation checklist",
+    "text": "Validation checklist\nBefore trusting AI-generated code or plots:\n\nDoes the chart type match my data?\nAre axes correctly labeled and scaled?\nAre units correct?\nAre categories ordered meaningfully?\nAre colors accessible?\nDoes the code reproduce the same figure on rerun?\nDo I understand what every major line of code does?\n\nIf the answer is “no” to any of these, treat the output as a draft, not final work."
+  },
+  {
+    "objectID": "pages/code/ai.html#transparency-and-acknowledgment",
+    "href": "pages/code/ai.html#transparency-and-acknowledgment",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Transparency and acknowledgment",
+    "text": "Transparency and acknowledgment\nIf AI tools made a substantial contribution to:\n\ncode generation\nwriting\nfigure design\n\nconsider:\n\ndocumenting this in internal project notes\nacknowledging AI assistance when appropriate (e.g., teaching material, tutorials)\n\nDo not list AI as an author of scientific work."
+  },
+  {
+    "objectID": "pages/code/ai.html#how-this-page-will-evolve",
+    "href": "pages/code/ai.html#how-this-page-will-evolve",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "How this page will evolve",
+    "text": "How this page will evolve\nOver time, this page may include:\n\nexamples of good prompts\ncase studies\nAI-assisted figure walkthroughs\nlab policies on AI use\nreproducibility guidelines\n\nTreat AI as a powerful tool that improves productivity — not as a substitute for expertise."
+  },
+  {
+    "objectID": "pages/plots/example.html",
+    "href": "pages/plots/example.html",
+    "title": "TSV vs Operative Temperature",
+    "section": "",
+    "text": "TSV vs Operative Temperature\n(Here you later put the full explanation, R/Python code chunks, etc.)\n\n\n\n\n\n\nNote\n\n\n\nSource: r quarto::metadata$source\nTags: r paste(quarto::metadata$tags, collapse = \", \")\nCode:\n- R: View on GitHub\n- Python: View on GitHub"
+  },
+  {
+    "objectID": "pages/plot-library.html",
+    "href": "pages/plot-library.html",
+    "title": "Plot Library",
+    "section": "",
+    "text": "Occupant Satisfaction Distribution\n\n\nStandard CBE plot to visualize satisfaction with IEQ parameters.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "pages/plots/sat-plot.html",
+    "href": "pages/plots/sat-plot.html",
+    "title": "Occupant Satisfaction Distribution",
+    "section": "",
+    "text": "(Here you later put the full explanation, R/Python code chunks, etc.)\n\n\n\n\n\n\nNote\n\n\n\nSource: Parkinson et al. (2023)  DOI: https://doi.org/10.5334/bc.274 \nCode: View R code of similar plot on GitHub · Added by T. Kramer"
+  },
+  {
+    "objectID": "pages/styling/index.html",
+    "href": "pages/styling/index.html",
+    "title": "Styling Guidelines",
+    "section": "",
+    "text": "These guidelines define the default visual standards for plots and figures in the CBE Building Science Plot Library.\nThe main goals are:\n\nclarity – figures should be easy to interpret\nconsistency – plots should look coherent across projects\nreproducibility – formatting choices should be deliberate and documented\npublication-readiness – figures should scale cleanly from reports to journal submissions\n\nThese recommendations aim to encourage good habits in everyday work and to reduce last-minute figure reformatting when preparing publications.\n\n\n\nUse a sans-serif font (e.g., Arial or Helvetica) for all text in figures.\nUse standard journal widths when preparing figures for scientific publications:\n\nSingle-column: 89 mm\nTwo-column: 183 mm\n\nWhen using these standard widths, a font size of ~7pt is appropriate for axis labels, tick labels, and legend text.\nUse a white background for all plots.\nA transparent background is also acceptable when exporting PNGs (e.g., for slides).\nFor charts and plots, avoid borders unless needed for clarity.\nUse no more than 4–6 tick labels on each axis where possible.\nInclude detailed captions.\nThe figure and caption should be understandable without referring back to the main text.\n\n\n\n\n\n\n\nImportantThings to avoid\n\n\n\n\nAvoid pie charts.\nBar charts usually communicate the same information more clearly and comparably.\nAvoid 3D charts.\nWhen rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.\nAvoid gridlines by default.\nGridlines were historically used to assist manual interpretation.\nIn modern workflows, it is better to:\n\nshare the underlying dataset, and\n\nadd gridlines only if they improve interpretability."
+  },
+  {
+    "objectID": "pages/styling/index.html#general-plotting-guidelines",
+    "href": "pages/styling/index.html#general-plotting-guidelines",
+    "title": "Styling Guidelines",
+    "section": "",
+    "text": "Use a sans-serif font (e.g., Arial or Helvetica) for all text in figures.\nUse standard journal widths when preparing figures for scientific publications:\n\nSingle-column: 89 mm\nTwo-column: 183 mm\n\nWhen using these standard widths, a font size of ~7pt is appropriate for axis labels, tick labels, and legend text.\nUse a white background for all plots.\nA transparent background is also acceptable when exporting PNGs (e.g., for slides).\nFor charts and plots, avoid borders unless needed for clarity.\nUse no more than 4–6 tick labels on each axis where possible.\nInclude detailed captions.\nThe figure and caption should be understandable without referring back to the main text.\n\n\n\n\n\n\n\nImportantThings to avoid\n\n\n\n\nAvoid pie charts.\nBar charts usually communicate the same information more clearly and comparably.\nAvoid 3D charts.\nWhen rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.\nAvoid gridlines by default.\nGridlines were historically used to assist manual interpretation.\nIn modern workflows, it is better to:\n\nshare the underlying dataset, and\n\nadd gridlines only if they improve interpretability."
+  },
+  {
+    "objectID": "pages/styling/index.html#things-to-avoid",
+    "href": "pages/styling/index.html#things-to-avoid",
+    "title": "Styling Guidelines",
+    "section": "",
+    "text": "Avoid pie charts.\nBar charts usually communicate the same information more clearly and comparably.\nAvoid 3D charts.\nWhen rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.\nAvoid gridlines by default.\nGridlines were historically used to assist manual interpretation.\nIn modern workflows, it is better to:\n\nshare the underlying dataset, and\n\nadd gridlines only if they improve interpretability."
   }
 ]
