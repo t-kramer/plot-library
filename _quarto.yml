@@ -1,5 +1,8 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "!CONTRIBUTING.md"
 
 bibliography: references.bib
 csl: apa.csl
