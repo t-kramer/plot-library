@@ -1,5 +1,5 @@
 ---
-title: "Occupant Satisfaction Distribution"
+title: "Occupant satisfaction distribution"
 description: "Standard CBE plot to visualize satisfaction with IEQ parameters."
 categories: ["Occupant satisfaction", "Survey data", "R"]
 source: "@parkinsonCommonSourcesOccupant2023"

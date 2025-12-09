@@ -9,14 +9,15 @@ csl: apa.csl
 suppress-bibliography: true
 
 website:
-  title: "CBE Building Science Plot Library"
+  title: "CBE Chart Library"
   navbar:
+    logo: assets/img/cbe-favicon.png
     left:
-      - href: pages/index.qmd
-        text: Home
+      # - href: pages/index.qmd
+      #   text: Home
 
-      - href: pages/plot-library.qmd
-        text: Plot Library
+      - href: index.qmd
+        text: Plot Gallery
 
       - text: Styling
         menu:
@@ -47,6 +48,7 @@ website:
       - icon: github
         href: https://github.com/t-kramer/plot-library
         aria-label: GitHub repository
+      - href: pages/about.qmd
 
 
   page-footer:
