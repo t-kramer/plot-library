@@ -1,5 +1,3 @@
-/*-- scss:rules --*/
-
 /* Tweak body font size & max width */
 body {
   font-size: 16px;
@@ -46,26 +44,3 @@ main.content img {
 main.content img {
   border: 1px solid #ddd;
 }
-
-// /* Category pills */
-// .quarto-category {
-//   background-color: #f0f6ff;
-//   color: #004a99;
-//   border-radius: 12px;
-//   padding: 4px 10px;
-//   font-size: 0.85rem;
-//   margin: 4px;
-//   border: 1px solid #cdddf5;
-//   cursor: pointer;
-// }
-
-// .quarto-category:hover {
-//   background-color: #e0edff;
-// }
-
-// /* The selected/active category */
-// .quarto-category.active {
-//   background-color: #004a99;
-//   color: white;
-//   border-color: #003366;
-// }

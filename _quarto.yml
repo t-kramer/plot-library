@@ -60,9 +60,8 @@ website:
 
 format:
   html:
-    theme: 
-    - quartz
-    - styles/custom.scss
+    theme: quartz
+    css: styles/custom.css
     toc: true
     grid:
       body-width: 900px
