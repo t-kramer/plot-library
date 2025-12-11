@@ -1,7 +1,7 @@
 ---
 title: "Thermal preference"
 description: "Distribution of thermal preference votes, e.g from survey data."
-categories: ["Thermal comfort", "Survey data", "R"]
+categories: ["Survey data", "R"]
 code-r: "https://github.com/t-kramer/plot-library/src/R/plots/tpv.R"
 code-python: None
 code-contributor: "T. Kramer"

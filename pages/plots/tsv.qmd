@@ -1,7 +1,7 @@
 ---
 title: "Thermal sensation"
 description: "Distribution of thermal sensation votes, e.g from survey data."
-categories: ["Thermal comfort", "Survey data", "R"]
+categories: ["Survey data", "R"]
 code-r: "https://github.com/t-kramer/plot-library/src/R/plots/tsv.R"
 code-python: None
 code-contributor: "T. Kramer"

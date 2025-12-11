@@ -1,0 +1,69 @@
+/* Tweak body font size & max width */
+body {
+  font-size: 16px;
+}
+
+/* Slightly widen content to give more room for code and plots */
+main.content {
+  max-width: 900px;
+}
+
+/* Make code blocks a bit more compact */
+.code-with-output .sourceCode {
+  font-size: 0.9rem;
+}
+
+
+/* Plot Library card image padding */
+.quarto-listing .card-img-top {
+  padding: 0.5rem;
+  background-color: #ffffff;
+}
+
+/* Optional: give cards slightly rounded corners */
+.quarto-listing .card {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Optional: more breathing room inside cards */
+.quarto-listing .card-body {
+  padding: 0.75rem 1rem;
+}
+
+
+/* Style all figures inside pages (but NOT listing cards) */
+main.content img {
+  max-height: 500px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+/* Optional: subtle border around plots */
+main.content img {
+  border: 1px solid #ddd;
+}
+
+// /* Category pills */
+// .quarto-category {
+//   background-color: #f0f6ff;
+//   color: #004a99;
+//   border-radius: 12px;
+//   padding: 4px 10px;
+//   font-size: 0.85rem;
+//   margin: 4px;
+//   border: 1px solid #cdddf5;
+//   cursor: pointer;
+// }
+
+// .quarto-category:hover {
+//   background-color: #e0edff;
+// }
+
+// /* The selected/active category */
+// .quarto-category.active {
+//   background-color: #004a99;
+//   color: white;
+//   border-color: #003366;
+// }

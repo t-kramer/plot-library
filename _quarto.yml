@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
   render:
     - "*.qmd"
     - "!CONTRIBUTING.md"
@@ -10,6 +11,7 @@ suppress-bibliography: true
 
 website:
   title: "CBE Chart Library"
+  open-graph: true
   navbar:
     logo: assets/img/cbe-favicon.png
     left:

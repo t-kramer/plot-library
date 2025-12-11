@@ -1,8 +1,11 @@
+
+---
+page-navigation: true
+---
+
 # Styling Guidelines
 
-These guidelines define the **default visual standards** for plots and figures in the CBE Building Science Plot Library.
-
-The main goals are:
+Internally, we define **default visual standards** for plots and figures. The main goals are:
 
 - **clarity** – figures should be easy to interpret
 - **consistency** – plots should look coherent across projects
@@ -11,20 +14,27 @@ The main goals are:
 
 These recommendations aim to encourage good habits in everyday work and to reduce last-minute figure reformatting when preparing publications.
 
+---
 
-## General plotting guidelines
+### General plotting guidelines
 
-- Use a **sans-serif font** (e.g., Arial or Helvetica) for all text in figures.
-- Use **standard journal widths** when preparing figures for scientific publications:
+- [ ] **Use a sans-serif font type.** <br>
+      Fonts like Arial or Helvetica are easier to read and are usually the font of choice for labels and annotations.
+
+- [ ] **Use standard journal column widths.** <br>
+      When preparing figures for scientific publications using standard widths (e.g. single or double column) is critical to make decisions on font size and aspect ratio.
   - Single-column: `89 mm`
   - Two-column: `183 mm`
-- When using these standard widths, a **font size** of ~`7pt` is appropriate for axis labels, tick labels, and legend text.
-- Use a **white background** for all plots.  
-  A transparent background is also acceptable when exporting PNGs (e.g., for slides).
-- For charts and plots, **avoid borders** unless needed for clarity.
-- Use **no more than 4–6 tick labels** on each axis where possible.
-- Include **detailed captions.**  
-  The figure and caption should be understandable without referring back to the main text.
+- [ ] **Use an appropriate font size.** <br>
+      Everything smaller than `7pt` this is usually too small for axis labels, tick labels, and legend text.
+- [ ] **Use a neutral background.** <br>
+      Usually a white or transparent background is best when exporting PNGs (e.g., for slides).
+- [ ] **Avoid using borders and frames.** <br>
+      Unless they are needed for clarity.
+- [ ] **Use 4–6 tick labels or less.** <br>
+      More ticks reduce clarity and add unnecessary detail.
+- [ ] **Use detailed captions.** <br>
+      The figure and caption should be understandable without referring back to the main text.
 
 
 ::: {.callout-important}
