@@ -1,9 +1,6 @@
 project:
   type: website
   output-dir: docs
-  render:
-    - "*.qmd"
-    - "!CONTRIBUTING.md"
 
 bibliography: references.bib
 csl: apa.csl
@@ -63,6 +60,9 @@ website:
 
 format:
   html:
-    theme: quartz
-    css: styles/custom.scss
+    theme: 
+    - quartz
+    - styles/custom.scss
     toc: true
+    grid:
+      body-width: 900px
