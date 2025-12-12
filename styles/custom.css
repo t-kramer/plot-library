@@ -44,3 +44,22 @@ main.content img {
 main.content img {
   border: 1px solid #ddd;
 }
+
+
+/* Inline color swatches for palette tables */
+.swatch {
+  display: inline-block;
+  width: 5rem;              /* ← makes all swatches the same length */
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  background: var(--swatch-color, #cccccc);
+  color: #ffffff;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+}
+
+/* For light backgrounds where you want dark text */
+.swatch.light {
+  color: #222222;
+}

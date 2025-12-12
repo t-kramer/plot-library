@@ -25,7 +25,7 @@ plot_stacked_pct <- function(data, var, palette) {
     geom_bar(position = "fill") +
     scale_y_continuous(labels = percent, expand = expansion(mult = c(0, 0.01))) +
     scale_fill_manual(values = palette, labels = label_wrap_gen(width = 9)) +
-    labs(x = "Survey ID", y = "Percentage") +
+    labs(y = "Percentage") +
     theme_minimal(base_size = 7) +
     theme(
       legend.position = "right",
@@ -33,7 +33,8 @@ plot_stacked_pct <- function(data, var, palette) {
       legend.title = element_blank(),
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank(),
-      axis.title.x = element_text(margin = margin(t = 6)),
+      # axis.title.x = element_text(margin = margin(t = 6)),
+      axis.title.x = element_blank(),
       axis.ticks.y = element_line(color = "grey", linewidth = 0.25),
       axis.ticks.x = element_blank(),
       axis.ticks.length = unit(1, "mm")
