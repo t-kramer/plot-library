@@ -1,5 +1,5 @@
 ---
-title: "Occupant satisfaction"
+title: "Occupant satisfaction with building by category"
 description: "Plot comparing thermal satisfaction in different building categories."
 categories: ["Survey data", "Snapshot"]
 source: "@kentIndoorEnvironmentalQuality2024"

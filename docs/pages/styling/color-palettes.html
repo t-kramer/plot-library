@@ -107,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <link rel="stylesheet" href="../../styles/custom.css">
 <meta property="og:title" content="CBE Chart Library">
-<meta property="og:image" content="color-palettes_files/figure-html/unnamed-chunk-1-1.png">
+<meta property="og:image" content="color-palettes_files/figure-html/satisfaction-1.png">
 <meta property="og:site_name" content="CBE Chart Library">
 </head>
 
@@ -134,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Plot Gallery</span></a>
+<span class="menu-text">Gallery</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-styling" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -216,6 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#occupant-satisfaction" id="toc-occupant-satisfaction" class="nav-link active" data-scroll-target="#occupant-satisfaction">Occupant satisfaction</a></li>
   <li><a href="#thermal-sensation" id="toc-thermal-sensation" class="nav-link" data-scroll-target="#thermal-sensation">Thermal sensation</a></li>
   <li><a href="#thermal-preference" id="toc-thermal-preference" class="nav-link" data-scroll-target="#thermal-preference">Thermal preference</a></li>
+  <li><a href="#thermal-acceptability" id="toc-thermal-acceptability" class="nav-link" data-scroll-target="#thermal-acceptability">Thermal acceptability</a></li>
   </ul>
 </nav>
     </div>
@@ -231,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="color-palettes_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="5000"></p>
+<p><img src="color-palettes_files/figure-html/satisfaction-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="5000"></p>
 </figure>
 </div>
 </div>
@@ -241,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>satisfaction_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"-3"</span>, <span class="st">"-2"</span>, <span class="st">"-1"</span>, <span class="st">"0"</span>, <span class="st">"+1"</span>, <span class="st">"+2"</span>, <span class="st">"+3"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>satisfaction_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Very</span><span class="sc">\n</span><span class="st">Dissatisfied"</span>, <span class="st">"Dissatisfied"</span>, <span class="st">"Somewhat</span><span class="sc">\n</span><span class="st">Dissatisfied"</span>, <span class="st">"Neither"</span>,  <span class="st">"Somewhat</span><span class="sc">\n</span><span class="st">Satisfied"</span>, <span class="st">"Satisfied"</span>, <span class="st">"Very</span><span class="sc">\n</span><span class="st">Satisfied"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>satisfaction_cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#ba3b50"</span>, <span class="st">"#cf6b61"</span>, <span class="st">"#d09da9"</span>, <span class="st">'#f3e8e7'</span>, <span class="st">"#c2e8bb"</span>, <span class="st">"#8bcc8a"</span>, <span class="st">"#4cb15e"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>satisfaction_palette <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#ba3b50"</span>, <span class="st">"#cf6b61"</span>, <span class="st">"#d09da9"</span>, <span class="st">'#f3e8e7'</span>, <span class="st">"#c2e8bb"</span>, <span class="st">"#8bcc8a"</span>, <span class="st">"#4cb15e"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
@@ -252,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="color-palettes_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="5000"></p>
+<p><img src="color-palettes_files/figure-html/thermal_sensation-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="5000"></p>
 </figure>
 </div>
 </div>
@@ -273,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="color-palettes_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="5000"></p>
+<p><img src="color-palettes_files/figure-html/thermal_preference-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="5000"></p>
 </figure>
 </div>
 </div>
@@ -283,7 +284,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>thermal_preference_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"-1"</span>, <span class="st">"0"</span>, <span class="st">"+1"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>thermal_preference_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Cooler"</span>, <span class="st">"No change"</span>, <span class="st">"Warmer"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>thermal_preference_cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#82c6ed"</span>,<span class="st">"#c9e0b0"</span>,<span class="st">"#eb6b58"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>thermal_preference_palette <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#82c6ed"</span>,<span class="st">"#c9e0b0"</span>,<span class="st">"#eb6b58"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<hr>
+</section>
+<section id="thermal-acceptability" class="level3">
+<h3 class="anchored" data-anchor-id="thermal-acceptability">Thermal acceptability</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="color-palettes_files/figure-html/thermal_acceptability-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="5000"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>thermal_acceptability_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"-2"</span>, <span class="st">"-1"</span>, <span class="st">"0"</span>, <span class="st">"+1"</span>, <span class="st">"+2"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>thermal_acceptability_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Very unacceptable"</span>, <span class="st">"Somewhat unacceptable"</span>, <span class="st">"Neither nor"</span>, <span class="st">"Somewhat acceptable"</span>, <span class="st">"Very acceptable"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>thermal_acceptability_palette <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'#bc3e4d'</span>,<span class="st">'#d99fa8'</span>,<span class="st">'#f3e8e7'</span>,<span class="st">'#c1e0b9'</span>,<span class="st">'#38a257'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 

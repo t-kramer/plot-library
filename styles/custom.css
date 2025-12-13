@@ -63,3 +63,36 @@ main.content img {
 .swatch.light {
   color: #222222;
 }
+
+
+/* Folded / unfolded code blocks */
+div.sourceCode {
+  background-color: rgba(255, 255, 255, 0.8); /* white-ish, transparent */
+  border-radius: 12px;
+  padding: 0.75em;
+}
+
+/* Inner code area */
+div.sourceCode pre {
+  background-color: transparent;
+}
+
+/* Toggle button */
+button.code-fold-toggle {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  border: none;
+}
+
+
+/* Callout header: improve contrast */
+.callout > .callout-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #1f2933; /* dark slate */
+  font-weight: 600;
+}
+
+/* Optional: callout body text */
+.callout > .callout-body {
+  color: #e5e7eb; /* slightly brighter than Quartz default */
+}

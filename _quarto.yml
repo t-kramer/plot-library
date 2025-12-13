@@ -12,11 +12,9 @@ website:
   navbar:
     logo: assets/img/cbe-favicon.png
     left:
-      # - href: pages/index.qmd
-      #   text: Home
 
       - href: index.qmd
-        text: Plot Gallery
+        text: Gallery
 
       - text: Styling
         menu:
